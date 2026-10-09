@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-2.0-only
+config TOUCHSCREEN_ILI9882_MMI
+	tristate "Motorola ili9882_mmi touchscreen"
+	depends on SPI
+
+config INPUT_ILI_0FLASH_MMI_ENABLE_DOUBLE_TAP
+	bool "Ilitek double tap"
+	depends on TOUCHSCREEN_ILI9882_MMI && SENSORS_CLASS
+
+config INPUT_ILI_0FLASH_MMI_NOTIFY_TOUCH_STATE
+	bool "Ilitek touch state notification"
+	depends on TOUCHSCREEN_ILI9882_MMI && SENSORS_CLASS
+
+config INPUT_ILI_PANEL_NOTIFICATIONS
+	bool "Ilitek panel notifications"
+	depends on TOUCHSCREEN_ILI9882_MMI && SENSORS_CLASS
+

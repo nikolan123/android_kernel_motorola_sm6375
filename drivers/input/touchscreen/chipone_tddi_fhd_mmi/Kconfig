@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-2.0-only
+config TOUCHSCREEN_CHIPONE_FHD_MMI
+	tristate "Motorola chipone_tddi_fhd_mmi touchscreen"
+	depends on SPI
+
+config INPUT_CHIPONE_0FLASH_MMI_ENABLE_DOUBLE_TAP
+	bool "Chipone double tap"
+	depends on TOUCHSCREEN_CHIPONE_FHD_MMI && SENSORS_CLASS
+
+config INPUT_CHIPONE_0FLASH_MMI_NOTIFY_TOUCH_STATE
+	bool "Chipone touch state notification"
+	depends on TOUCHSCREEN_CHIPONE_FHD_MMI && SENSORS_CLASS
+
+config INPUT_CHIPONE_PANEL_NOTIFICATIONS
+	bool "Chipone panel notifications"
+	depends on TOUCHSCREEN_CHIPONE_FHD_MMI && SENSORS_CLASS
+
