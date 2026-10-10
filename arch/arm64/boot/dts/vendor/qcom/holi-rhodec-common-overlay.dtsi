@@ -213,7 +213,7 @@
 			/* sleep state */
 			mux {
 				/* GPIO 7: NFC CLK Req */
-				pins = "gpi7";
+				pins = "gpio7";
 				function = "gpio";
 			};
 
